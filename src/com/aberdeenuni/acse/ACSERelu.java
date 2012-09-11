@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class ACSEYoutube extends ListActivity 
+public class ACSERelu extends ListActivity 
 {
 	private List<Message> messages;
     
@@ -18,8 +18,8 @@ public class ACSEYoutube extends ListActivity
     public void onCreate(Bundle icicle) 
     {
         super.onCreate(icicle);
-        setContentView(R.layout.youtube);
-        loadFeed(ParserType.ANDROID_SAX_YOUTUBE);
+        setContentView(R.layout.relu);
+        loadFeed(ParserType.ANDROID_SAX_RELU);
     }
 
 	@Override
@@ -29,8 +29,7 @@ public class ACSEYoutube extends ListActivity
 		Intent viewMessage = new Intent(Intent.ACTION_VIEW, Uri.parse(messages.get(position).getLink().toExternalForm()));
 		this.startActivity(viewMessage);
 	}
-	
-	
+
 	private void loadFeed(ParserType type)
 	{
     	try

@@ -25,6 +25,7 @@ public class AndroidSaxFeedParser extends BaseFeedParser
 		final List<Message> messages = new ArrayList<Message>();
 		Element channel = root.getChild(CHANNEL);
 		Element item = channel.getChild(ITEM);
+		Element enclosure = item.getChild(ENCLOSURE);
 		item.setEndElementListener(new EndElementListener()
 		{
 			public void end() 
@@ -46,6 +47,14 @@ public class AndroidSaxFeedParser extends BaseFeedParser
 			public void end(String body) 
 			{
 				currentMessage.setLink(body);
+			}
+		});
+		
+		enclosure.getChild(URL).setEndTextElementListener(new EndTextElementListener()
+		{
+			public void end(String body) 
+			{
+				currentMessage.setEnclosure(body);
 			}
 		});
 		

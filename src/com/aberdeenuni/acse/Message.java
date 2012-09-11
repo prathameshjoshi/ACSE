@@ -13,6 +13,7 @@ public class Message implements Comparable<Message>
 	private URL link;
 	private String description;
 	private Date date;
+	private URL enclosure;
 
 	public String getTitle() 
 	{
@@ -29,11 +30,28 @@ public class Message implements Comparable<Message>
 		return link;
 	}
 	
+	public URL getEnclosure()
+	{
+	    return enclosure;
+	}
+	
 	public void setLink(String link) 
 	{
 		try 
 		{
 			this.link = new URL(link);
+		} 
+		catch (MalformedURLException e) 
+		{
+			throw new RuntimeException(e);
+		}
+	}
+	
+	public void setEnclosure(String enclosure) 
+	{
+		try 
+		{
+			this.enclosure = new URL(enclosure);
 		} 
 		catch (MalformedURLException e) 
 		{
@@ -82,6 +100,7 @@ public class Message implements Comparable<Message>
 		copy.link = link;
 		copy.description = description;
 		copy.date = date;
+		copy.enclosure = enclosure;
 		return copy;
 	}
 	
@@ -100,6 +119,9 @@ public class Message implements Comparable<Message>
 		sb.append('\n');
 		sb.append("Description: ");
 		sb.append(description);
+		sb.append('\n');
+		sb.append("Enclosure: ");
+		sb.append(enclosure);
 		return sb.toString();
 	}
 
@@ -109,9 +131,9 @@ public class Message implements Comparable<Message>
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((date == null) ? 0 : date.hashCode());
-		result = prime * result
-				+ ((description == null) ? 0 : description.hashCode());
+		result = prime * result	+ ((description == null) ? 0 : description.hashCode());
 		result = prime * result + ((link == null) ? 0 : link.hashCode());
+		result = prime * result + ((enclosure == null) ? 0 : enclosure.hashCode());
 		result = prime * result + ((title == null) ? 0 : title.hashCode());
 		return result;
 	}
@@ -150,6 +172,14 @@ public class Message implements Comparable<Message>
 		} 
 		else if (!link.equals(other.link))
 			return false;
+			
+        if (enclosure == null) 
+		{
+			if (other.enclosure != null)
+				return false;
+		} 
+		else if (!enclosure.equals(other.enclosure))
+			return false;			
 		
 		if (title == null) 
 		{

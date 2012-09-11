@@ -1,0 +1,32 @@
+This application is developed for Aberdeen Centre for Environmental
+Sustainability(ACES). This application unify content from the ACES's website
+http://www.aces.ac.uk/ and from other social network sites and other related websites.
+This application contain menu list like Events, News, Youtube, Twitter, Facebook,
+Slideshare , International News, Podcast, Fact of the week, Barcode Scanner, About.
+
+This application collects data of Events, News, and About from website and
+Display in the application.
+It collects videos from Youtube uploaded by ACES and display list of all the
+videos. Also it can stream Youtube videos in the application itself.
+When you click on Twitter, it populate all the twitter tweets from ACES.
+In Facebook It populate all the news feed from Facebook like page of ACES.
+Also when we click on the feed it redirect to facebook site to that feed.
+In slideshare it populate all the presentation links uploaded by ACES on
+Slideshare.
+In International News it having 3 sub menu contain Guardian, BBC, Reuters.
+◦ In Guardian it populate environmental news from Guardian website
+◦ In BBC it display all the news related to environment available on the BBC
+site.
+◦ Retures display all the news from Retures website related to environment.
+Podcast contain 2 sub menu RELU Sustainable Uplands and Mark's People,
+Plants, Planning and Conservation
+◦ In RELU sustainable Uplands it list all the podcast feed.
+◦ In Mark's People, Plants, Planning and Conservation lists all the podcast
+feeds.
+Facts of the Week display sub menu containing Fast facts, Interesting Facts,
+Odd Facts, Facts about Certain Species, Endangered Facts. Which display all
+the facts of the week.
+By using Barcode Scanner you can scan barcode and QRCode and display
+information about it.
+About display information about ACES.
+

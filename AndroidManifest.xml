@@ -13,27 +13,27 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ACSENews" 
-                  android:label="News"/>
-        <activity android:name=".ACSEEvents" 
-                  android:label="Events"/>
-        <activity android:name=".ACSETwitter" 
-                  android:label="Twitter Feeds @AberdeenCES"/>
-        <activity android:name=".ACSEFacebook" 
-                  android:label="Aberdeen CES Facebook"/>
-        <activity android:name=".ACSEYoutube" 
-                  android:label="Aberdeen CES Youtube"/>
-        <activity android:name=".ACSESlideshare" 
-                  android:label="Aberdeen CES Slideshare"/>
+        <activity android:name=".ACSENews" />
+        <activity android:name=".ACSEEvents" />
+        <activity android:name=".ACSETwitter" />
+        <activity android:name=".ACSEFacebook" />
+        <activity android:name=".ACSEYoutube" />
+        <activity android:name=".ACSESlideshare" />
         <activity android:name=".ACSEAbout"/>
-        <activity android:name=".ACSEInternationalNews" 
-                  android:label="International Environment NEWS"/>
-        <activity android:name=".ACSEGuardian" 
-                  android:label="Guardian Environment NEWS"/>
-        <activity android:name=".ACSEBbc" 
-                  android:label="BBC Environment NEWS"/>
-        <activity android:name=".ACSEReuters" 
-                  android:label="Reuters Environment NEWS"/>
+        <activity android:name=".ACSEInternationalNews" />
+        <activity android:name=".ACSEGuardian" />
+        <activity android:name=".ACSEBbc" />
+        <activity android:name=".ACSEReuters" />
+        <activity android:name=".ACSEPodcast" />
+        <activity android:name=".ACSERelu" />
+        <activity android:name=".ACSEPppc" />
+        <activity android:name=".ACSEFactsofweek" />
+        <activity android:name=".ACSEFastfacts" />
+        <activity android:name=".ACSEInterestingfacts" />
+        <activity android:name=".ACSEOddfacts" />
+        <activity android:name=".ACSESpeciesfacts" />
+        <activity android:name=".ACSEEndangeredfacts"/>
+        <activity android:name=".ACSEBarcodescanner"/>
     </application>
 <uses-permission android:name="android.permission.INTERNET"></uses-permission>    
 </manifest> 

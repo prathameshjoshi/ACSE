@@ -21,7 +21,7 @@ import 	android.view.ViewGroup;
 public class ACSE extends ListActivity implements OnItemClickListener
 {
     ListView list;
-    String[] items = {"Events","News","Youtube","Twitter","Facebook","Slideshare", "International News","About"};
+    String[] items = {"Events","News","Youtube","Twitter","Facebook","Slideshare", "International News","Podcast","Fact of the week","Barcode Scanner","About"};
     
     /** Called when the activity is first created. */
     @Override
@@ -36,41 +36,6 @@ public class ACSE extends ListActivity implements OnItemClickListener
         list.setAdapter(new ArrayAdapter(this,android.R.layout.simple_list_item_1,items));
     }
     
-    /*class IconAdapter extends ArrayAdapter<String> 
-    {
-        IconAdapter() 
-        {
-            super(ACSE.this, R.layout.row, android.R.id.list, items);
-        }
-        public View getView(int position, View convertView,ViewGroup parent) 
-        {
-            View row = super.getView(position, convertView, parent);
-            ImageView icon=(ImageView)row.findViewById(R.id.icon);
-            
-            switch(position)
-            {
-                case 0 : icon.setImageResource(R.drawable.events);
-                         break;
-                case 1 : icon.setImageResource(R.drawable.news);
-                         break;    
-                case 2 : icon.setImageResource(R.drawable.youtube);
-                         break;                            
-                case 3 : icon.setImageResource(R.drawable.twitter);
-                         break;                            
-                case 4 : icon.setImageResource(R.drawable.facebook);
-                         break;                            
-                case 5 : icon.setImageResource(R.drawable.slideshare);
-                         break;                            
-                case 6 : icon.setImageResource(R.drawable.internationalnews);
-                         break;                            
-                case 7 : icon.setImageResource(R.drawable.about);
-                         break;                                                                             
-            }
-        
-            return(row);
-        }
-    }*/
-  
     @Override
     public void onItemClick(AdapterView arg0, View v, int position, long arg3) 
     {
@@ -99,7 +64,18 @@ public class ACSE extends ListActivity implements OnItemClickListener
             case 6: Intent showInternationalNews = new Intent(ACSE.this,ACSEInternationalNews.class);
                     startActivity(showInternationalNews);
                     break;                                                            
-            case 7: Intent showAbout = new Intent(ACSE.this,ACSEAbout.class);
+            case 7: Intent showPodcast = new Intent(ACSE.this,ACSEPodcast.class);
+                    startActivity(showPodcast);
+                    break;   
+            case 8: Intent showFactsofweek = new Intent(ACSE.this,ACSEFactsofweek.class);
+                    startActivity(showFactsofweek);
+                    break;                                                                             
+            
+            case 9: Intent showBarcodescanner = new Intent(ACSE.this,ACSEBarcodescanner.class);
+                    startActivity(showBarcodescanner);
+                    break;                                
+                    
+            case 10: Intent showAbout = new Intent(ACSE.this,ACSEAbout.class);
                     startActivity(showAbout);
                     break;                                        
         }                 

@@ -11,6 +11,8 @@ public abstract class BaseFeedParser implements FeedParser
 	static final String PUB_DATE = "pubDate";
 	static final  String DESCRIPTION = "description";
 	static final  String LINK = "link";
+	static final String  ENCLOSURE = "enclosure";
+	static final String URL = "url";
 	static final  String TITLE = "title";
 	static final  String ITEM = "item";
 	
